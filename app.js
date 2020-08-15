@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
 app.post("/encode", (req, res) => {
   const str = req.body.encode;
   encoded_str = encoder(str);
-  res.jsonp({'data': encoded_str});
+  res.send(encoded_str);
 });
 app.post("/decode", (req, res) => {
   const str = req.body.decode;
