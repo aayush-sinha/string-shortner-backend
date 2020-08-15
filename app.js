@@ -60,7 +60,7 @@ app.post("/encode", (req, res) => {
 app.post("/decode", (req, res) => {
   const str = req.body.decode;
   decoded_str = decoder(str);
-  res.jsonp({'data': decoded_str});
+  res.send(decoded_str);
 });
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
